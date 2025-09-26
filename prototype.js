@@ -2,23 +2,24 @@
 
 let codes = ["C1", "C2", "C1", "C3", "C2", "C1"];
 
-let choosingcode = prompt("Which code do you want to count? (e.g., C1)");//what gonna shows on window
-
-choosingcode = choosingcode.toUpperCase();// for min and maj letters
-
-let count = 0;
-
-for (let i = 0; i < codes.length; i++) {
-  if (codes[i] === choosingcode) {
-    count++;
+// Function s
+function count(choosingcode) {
+  let count = 0;
+  choosingcode = choosingcode.toUpperCase();
+  for (let i = 0; i < codes.length; i++) {
+    if (codes[i].toUpperCase() === choosingcode) {
+      count++;
+    }
   }
+  return count;
 }
 
+// prompt section
+let choosingcodeInput = prompt("which one the you want to count");
 
-console.log(`The code "${choosingcode}" appears ${count} times.`);
+// Call the function
+let countResult = count(choosingcodeInput);
 
 
-
-
-
+console.log(`The code "${choosingcodeInput}" appears ${countResult} times.`);
 

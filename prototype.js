@@ -2,7 +2,7 @@
 
 let codes = ["C1", "C2", "C1", "C3", "C2", "C1"];
 
-// Function ss
+// Function s
 function count(choosingcode) {
   let count = 0;
   choosingcode = choosingcode.toUpperCase();
